@@ -33,10 +33,10 @@ This project showcases my skills, projects, certifications.
 
 📦 Installation & Running Locally
 
-git clone https://github.com/sudhirmhamane/sudhirmhamane.git
-cd sudhirmhamane
-npm install
-npm run dev
+- git clone https://github.com/sudhirmhamane/sudhirmhamane.git
+- cd sudhirmhamane
+- npm install
+- npm run dev
 
 ---
 
