@@ -32,10 +32,10 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section className="bg-black text-white py-16 px-4">
+    <section className="bg-black text-white py-12 px-4">
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-blue-500">MY SKILLS</h2>
-        <p className="italic text-gray-400 mt-2">
+        <h2 className="text-3xl sm:text-3xl md:text-4xl font-bold text-blue-500">MY SKILLS</h2>
+        <p className="italic text-gray-400 mt-2 mb-20 ">
           "Every skill begins with a decision to improve."
         </p>
       </div>

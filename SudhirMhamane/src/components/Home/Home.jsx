@@ -6,16 +6,44 @@ import Projects from "../Projects/Projects";
 import Contact from "../Contact/Contact";
 import Certificates from "../Certificates/Certificates";
 
+import { Link } from "react-router-dom";
+
 const Home = () => {
-  const texts = ["Web Developer", "Tech Enthusiast", "Elect Engineer"];
+  const texts = [
+    "Full Stack Developer",
+    "Tech Enthusiast",
+    "Elect Engineer",
+  ];
+  const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
+  const [subIndex, setSubIndex] = useState(0);
+  const [deleting, setDeleting] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    if (subIndex === texts[index].length + 1 && !deleting) {
+      setTimeout(() => setDeleting(true), 800);
+      return;
+    }
+
+    if (subIndex === 0 && deleting) {
+      setDeleting(false);
       setIndex((prev) => (prev + 1) % texts.length);
-    }, 1800);
-    return () => clearInterval(interval);
-  }, []);
+      return;
+    }
+
+    const timeout = setTimeout(
+      () => {
+        setSubIndex((prev) => prev + (deleting ? -1 : 1));
+      },
+      deleting ? 50 : 150
+    );
+
+    return () => clearTimeout(timeout);
+  }, [subIndex, deleting]);
+
+  useEffect(() => {
+    setText(texts[index].substring(0, subIndex));
+  }, [subIndex, index]);
 
   return (
     <>
@@ -27,14 +55,16 @@ const Home = () => {
           className="w-48 h-48 rounded-full object-cover border-2 border-blue-500 shadow-lg mb-6"
         />
 
+        <div>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center px-4 mb-5">
+            I'm Sudhir Mhamane - A
+          </h1>
+        </div>
+
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center px-4 flex flex-wrap justify-center items-center gap-2">
-          <span className="whitespace-nowrap">I'm Sudhir Mhamane - A</span>
-          <span
-            key={texts[index]}
-            className="text-blue-400 whitespace-nowrap transition-opacity duration-700 ease-in-out sm:ml-2 sm:inline-block block"
-            style={{ opacity: 1 }}
-          >
-            {texts[index]}
+          <span className="text-blue-400 inline-block min-w-[190px] text-left">
+            {text}
+            <span className="animate-pulse">|</span>
           </span>
         </h1>
 
@@ -45,13 +75,13 @@ const Home = () => {
           applications.
         </p>
 
-        <div className="mt-8 flex gap-6">
-          <a
-            href="/contact"
+        <div className="mt-8 flex flex-wrap gap-6 justify-center">
+          <Link
+            to="/contact"
             className="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition"
           >
             Connect
-          </a>
+          </Link>
           <a
             href="resume.pdf"
             target="_blank"
@@ -63,7 +93,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Add About and Skills Sections */}
+      {/* Other Sections */}
       <About />
       <Skills />
       <Projects />

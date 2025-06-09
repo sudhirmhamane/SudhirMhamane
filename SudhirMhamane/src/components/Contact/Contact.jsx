@@ -3,8 +3,8 @@ import React from "react";
 const Contact = () => {
   return (
     <section id="contact" className="py-20 bg-graph text-white px-6">
-      <div className="text-center mb-12 mt-20">
-        <h2 className="text-4xl font-bold text-blue-500">CONTACT ME</h2>
+      <div className="text-center mb-12">
+        <h2 className="text-3xl sm:text-3xl md:text-4xl font-bold text-blue-500">CONTACT ME</h2>
         <p className="italic text-gray-400 mt-2">
           "Let's connect — I'm just a message away!"
         </p>

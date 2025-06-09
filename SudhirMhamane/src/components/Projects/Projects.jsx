@@ -10,7 +10,7 @@ const projects = [
     description:
       "Developed a fully responsive web application that provides insightful facts and statistics about countries.",
     image: "project1.png",
-    tech: [<FaReact size={40} />,<SiTailwindcss size={40} />],
+    tech: [<FaReact size={35} />,<SiTailwindcss size={35} />,<FaGithub size={35} />],
     github: "https://github.com/sudhirmhamane/GoNations",
     demo: "https://gonations.vercel.app/",
   },
@@ -19,7 +19,7 @@ const projects = [
     description:
       "Worked on a recipe application leveraging TheMealDB API to provide a rich selection of international and regional recipes.",
     image: "project2.png",
-    tech: [<FaHtml5 size={40} />, <SiCss3 size={40} />,<SiJavascript size={40} />],
+    tech: [<FaHtml5 size={35} />, <SiCss3 size={35} />,<SiJavascript size={35} />,<FaGithub size={35} />],
     github: "https://github.com/sudhirmhamane/Recipe-Finder-App",
     demo: "https://recipefinder-app.vercel.app/",
   },
@@ -29,7 +29,7 @@ const projects = [
     description:
       "Worked on building a responsive weather forecasting application using HTML, CSS, and JavaScript.",
     image: weather,
-    tech: [<FaHtml5 size={40} />, <SiCss3 size={40} />,<SiJavascript size={40} />],
+    tech: [<FaHtml5 size={35} />, <SiCss3 size={35} />,<SiJavascript size={35} />,<FaGithub size={35} />],
     github: "https://github.com/sudhirmhamane/WeatherForecast",
     demo: "https://forecastweather.vercel.app/",
   },
@@ -38,8 +38,8 @@ const projects = [
 const Projects = () => {
   return (
     <section id="project" className="py-20 bg-graph text-white px-6">
-      <div className="text-center mb-12 mt-20">
-        <h2 className="text-4xl font-bold text-blue-500">MY PROJECTS</h2>
+      <div className="text-center mb-12 ">
+        <h2 className="text-3xl sm:text-3xl md:text-4xl font-bold text-blue-500">MY PROJECTS</h2>
         <p className="italic text-gray-400 mt-2">
           "A glimpse into my top projects and achievements."
         </p>

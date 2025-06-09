@@ -6,27 +6,42 @@ import { MdEmail } from "react-icons/md";
 import Footer from "../Footer/Footer";
 // import { SiUnstop } from 'react-icons/si';
 
+const education = [
+  {
+    level: "10th",
+    year: "2020",
+    grade: "86.60",
+    institute: "Graming Vidya Vikas Vidhyalay, Chapalagaon",
+  },
+  {
+    level: "12th",
+    year: "2022",
+    grade: "74.67",
+    institute:
+      "C.B. Khedgis Basaveshwar Sci Rajavijaysingh Comm & Raja Jaysing Arts College Akkalkot",
+  },
+  {
+    level: "Engineering",
+    year: "2022–Present",
+    grade: "7.22",
+    institute:
+      "Nagesh Karajagi Orchid College Of Engineering & Technology, Solapur",
+  },
+];
+
+
 const About = () => {
-  const texts = [
-    "Electrical Engineer",
-    "Full Stack Developer",
-    "Tech Enthusiast",
-  ];
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % texts.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
+  
   return (
     <>
       {/* About Section */}
-      <section className="min-h-screen bg-graph text-white py-16 px-6">
-        <div className="text-center mb-12 mt-20">
-          <h2 className="text-4xl font-bold text-blue-500">ABOUT ME</h2>
+      <section className="min-h-screen bg-graph text-white py-16 bg-graph px-6 pt-32 pb-16 grid grid-cols-1 place-items-center border-blue-600/40">
+
+
+        <div className="max-w-5xl w-full">
+
+          <div className="text-center mb-12">
+          <h2 className="text-3xl sm:text-3xl md:text-4xl font-bold text-blue-500">ABOUT ME</h2>
           <p className="italic text-gray-400 mt-2">
             "Driven by passion, powered by perseverance — that’s my journey."
           </p>
@@ -85,6 +100,40 @@ const About = () => {
             </div>
           </div>
         </div>
+        {/* Education Timeline - Vertical Layout */}
+        <div className="mb-16">
+          <div className="text-center mb-8 mt-12">
+            <h2 className="text-3xl sm:text-3xl md:text-4xl font-bold text-blue-500">MY EDUCATION</h2>
+            <p className="italic text-gray-400 mt-2">
+              "Education builds the path to tomorrow’s success."
+            </p>
+          </div>
+
+          <div className="relative border-l-2 border-blue-500 ml-4">
+            {education.map((edu, index) => (
+              <div key={index} className="mb-12 ml-6 relative">
+                <div className="absolute w-4 h-4 bg-blue-500 rounded-full -left-2 top-1.5 border-2 border-white"></div>
+                <div className="bg-blue-500/10 border border-blue-400 p-4 rounded-xl shadow-md">
+                  <h3 className="text-xl font-semibold text-blue-200">
+                    {edu.level}
+                  </h3>
+                  <p className="text-sm text-blue-300">Year: {edu.year}</p>
+                  <p className="text-sm text-gray-300 mt-1">
+                    Institute: {edu.institute}
+                  </p>
+                  <p className="text-sm text-gray-300 mt-1">
+                    Grade: {edu.grade}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        </div>
+
+
+        
       </section>
     </>
   );

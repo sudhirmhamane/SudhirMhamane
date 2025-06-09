@@ -23,27 +23,46 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center space-x-2 text-2xl font-bold text-white cursor-pointer">
           <Rocket className="w-7 h-7 text-blue-400" />
-          <span>SudhirMhamane</span>
+          <Link
+            to="/"
+            className="text-white text-xl font-bold transition hover:text-blue-300"
+          >
+            SudhirMhamane
+          </Link>
         </div>
 
         {/* Desktop Links */}
         <div className="hidden md:flex space-x-8">
-          <Link to="/" className="text-white text-lg font-bold transition hover:text-blue-300">
+          <Link
+            to="/"
+            className="text-white text-lg font-bold transition hover:text-blue-300"
+          >
             Home
           </Link>
-          <Link to="/about" className="text-white text-lg font-bold transition hover:text-blue-300">
+          <Link
+            to="/about"
+            className="text-white text-lg font-bold transition hover:text-blue-300"
+          >
             About
           </Link>
-          <Link to="/projects" className="text-white text-lg font-bold transition hover:text-blue-300">
+          <Link
+            to="/projects"
+            className="text-white text-lg font-bold transition hover:text-blue-300"
+          >
             Project
           </Link>
-          <Link to="/certificates" className="text-white text-lg font-bold transition hover:text-blue-300">
+          <Link
+            to="/certificates"
+            className="text-white text-lg font-bold transition hover:text-blue-300"
+          >
             Certificates
           </Link>
-          <Link to="/contact" className="text-white text-lg font-bold transition hover:text-blue-300">
+          <Link
+            to="/contact"
+            className="text-white text-lg font-bold transition hover:text-blue-300"
+          >
             Contact
           </Link>
-          
         </div>
 
         {/* Mobile Hamburger */}
@@ -81,6 +100,12 @@ const Navbar = () => {
             onClick={() => setIsOpen(false)}
           >
             Projects
+          </Link>
+          <Link
+            to="/certificates"
+            className="block text-white hover:text-blue-300"
+          >
+            Certificates
           </Link>
           <Link
             to="/contact"
