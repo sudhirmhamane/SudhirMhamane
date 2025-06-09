@@ -40,7 +40,7 @@ const About = () => {
 
         <div className="max-w-5xl w-full">
 
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
           <h2 className="text-3xl sm:text-3xl md:text-4xl font-bold text-blue-500">ABOUT ME</h2>
           <p className="italic text-gray-400 mt-2">
             "Driven by passion, powered by perseverance — that’s my journey."
@@ -57,11 +57,8 @@ const About = () => {
               Hello! I'm Sudhir Mhamane, a passionate Full Stack Developer and
               Electrical Engineer from Solapur, Maharashtra. With a strong
               foundation in Java, Data Structures, and modern web technologies
-              like React, Tailwind CSS, and Spring Boot, I bring ideas to life
-              through clean, responsive, and user-friendly web applications. I
-              have a year of experience building scalable and maintainable
-              software, and I enjoy solving complex problems and continuously
-              learning new technologies to enhance my skill set.
+              like React, Tailwind CSS, Node.js and Express.js, I bring ideas to life
+              through clean, responsive, and user-friendly web applications. I enjoy solving complex problems and continuously learning new technologies to enhance my skill set.
             </p>
 
             <h3 className="mt-8 text-lg font-semibold text-blue-400">
@@ -102,8 +99,8 @@ const About = () => {
         </div>
         {/* Education Timeline - Vertical Layout */}
         <div className="mb-16">
-          <div className="text-center mb-8 mt-12">
-            <h2 className="text-3xl sm:text-3xl md:text-4xl font-bold text-blue-500">MY EDUCATION</h2>
+          <div className="text-center mb-8 ">
+            <h2 className="mt-20 text-3xl sm:text-3xl md:text-4xl font-bold text-blue-500">MY EDUCATION</h2>
             <p className="italic text-gray-400 mt-2">
               "Education builds the path to tomorrow’s success."
             </p>

@@ -44,7 +44,7 @@ const Certificates = () => {
       <div className="max-w-5xl w-full">
         
 
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 mt-12">
           <h2 className="text-3xl sm:text-3xl md:text-4xl font-bold text-blue-500">MY CERTIFICATES</h2>
           <p className="italic text-gray-400 mt-2">
             "Credentials that validate my knowledge and skills"
