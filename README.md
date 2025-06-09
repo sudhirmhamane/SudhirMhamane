@@ -43,17 +43,18 @@ This project showcases my skills, projects, certifications.
 🚀 Deployment
 This project is deployed using Netlify:
 
-Connect GitHub repo to Netlify.
+- Connect GitHub repo to Netlify.
 
-Set build command:
+- Set build command:
 npm run build
 
-Set publish directory:
+- Set publish directory:
 dist
 
 ---
 
 🙋‍♂️ About Me
+
 I'm Sudhir Mhamane, a passionate Electrical Engineering student and full-stack Java developer. 
 I love building real-world solutions using modern technologies.
 
